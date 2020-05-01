@@ -14,7 +14,7 @@ namespace Dodgem
 {
     class PlayingState : GameState
     {
-        int metVel = 3,       shipVel = 6,    beamVel = 14;
+        int metVel = 3,       shipVel = 5,    beamVel = 14;
         int meteorAmount = 3, shipAmount = 2, beamAmount = 1;
 
         int[] obstacle = new int[] { 10, 35, 110, 300, 200, 264, 70, 38 };
