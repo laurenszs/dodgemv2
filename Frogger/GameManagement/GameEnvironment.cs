@@ -18,8 +18,7 @@ class GameEnvironment : Game
 
     static protected List<GameState> gameStateList;
     static protected GameState currentGameState;
-
-    public static KeyboardState KeyboardState
+    public static KeyboardState keyboardState
     {
         get { return Keyboard.GetState(); }
     }
@@ -61,6 +60,7 @@ class GameEnvironment : Game
         graphics.ApplyChanges();
     }
 
+
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -84,6 +84,8 @@ class GameEnvironment : Game
             currentGameState.Update(gameTime);
 
         base.Update(gameTime);
+         
+    
     }
 }
 

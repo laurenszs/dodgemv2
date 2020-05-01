@@ -41,12 +41,17 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Frogger.cs" />
+    <Compile Include="dodgem.cs" />
     <Compile Include="GameManagement\GameEnvironment.cs" />
     <Compile Include="GameManagement\GameObject.cs" />
     <Compile Include="GameManagement\GameState.cs" />
-    <Compile Include="GameObjects\Frog.cs" />
+    <Compile Include="GameObjects\EnemyShip.cs" />
+    <Compile Include="GameObjects\LaserBeam.cs" />
+    <Compile Include="GameObjects\Meteorite.cs" />
+    <Compile Include="GameObjects\PlayerShip.cs" />
     <Compile Include="GameStates\PlayingState.cs" />
+    <Compile Include="GameStates\StartingState.cs" />
+    <Compile Include="GameStates\winState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,14 +63,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\meteorite_one.png" />
     <Content Include="Content\spr_background.png" />
-    <Content Include="Content\spr_dozer.png" />
-    <Content Include="Content\spr_fly.png" />
     <Content Include="Content\spr_frog.png" />
     <Content Include="Content\spr_gameover_screen.png" />
+    <Content Include="Content\spr_laserbeam.png" />
     <Content Include="Content\spr_racecar.png" />
+    <Content Include="Content\spr_ship.png" />
     <Content Include="Content\spr_start_screen.png" />
-    <Content Include="Content\spr_truck.png" />
     <Content Include="Content\spr_win_screen.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>

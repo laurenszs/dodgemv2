@@ -11,6 +11,7 @@ class GameObject
     public Vector2 position;
     public Vector2 velocity;
     public Texture2D texture;
+    public Random random = new Random();
 
     public GameObject(String assetName)
     {
@@ -18,11 +19,14 @@ class GameObject
         Init();
     }
 
-    public virtual void Update() { }
-
+    public virtual void Update() 
+    { 
+    
+    }
     public virtual void Draw(SpriteBatch spriteBatch)
     {
         spriteBatch.Draw(texture, position, Color.White);
+        
     }
 
     public virtual void Init()
@@ -40,7 +44,6 @@ class GameObject
             y0 = this.position.Y,
             x1 = other.position.X,
             y1 = other.position.Y;
-
         return !(x0 > x1 + w1 || x0 + w0 < x1 ||
           y0 > y1 + h1 || y0 + h0 < y1);
     }

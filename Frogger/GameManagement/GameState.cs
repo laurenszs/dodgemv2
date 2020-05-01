@@ -6,13 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 class GameState
 {
     protected List<GameObject> gameObjectList;
-
+    public int gameRoom = 0;
     public GameState()
     {
         gameObjectList = new List<GameObject>();
+
     }
 
     public virtual void Init()
@@ -25,6 +27,7 @@ class GameState
     {
         foreach (GameObject gameObject in gameObjectList)
             gameObject.Update();
+
     }
 
     public virtual void Draw(SpriteBatch spriteBatch)
