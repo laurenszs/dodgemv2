@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,18 +16,20 @@ class GameObject
 
     public GameObject(String assetName)
     {
+
         texture = GameEnvironment.ContentManager.Load<Texture2D>(assetName);
         Init();
     }
 
-    public virtual void Update() 
-    { 
-    
+    public virtual void Update()
+    {
+
     }
     public virtual void Draw(SpriteBatch spriteBatch)
     {
         spriteBatch.Draw(texture, position, Color.White);
         
+
     }
 
     public virtual void Init()

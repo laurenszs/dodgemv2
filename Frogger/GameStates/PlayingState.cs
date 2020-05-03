@@ -14,16 +14,23 @@ namespace Dodgem
 {
     class PlayingState : GameState
     {
-        int metVel = 3,       shipVel = 5,    beamVel = 14;
+        int metVel = 3, shipVel = 5, beamVel = 14;
         int meteorAmount = 3, shipAmount = 2, beamAmount = 1;
-
+        int heartAmount;
         int[] obstacle = new int[] { 10, 35, 110, 300, 200, 264, 70, 38 };
+
+        int[] heartX = new int[] { 0, 37, 74 };
         PlayerShip thePlayer = new PlayerShip();
         public Random random = new Random();
+
         public PlayingState()
         {
+            heartAmount = 3;
             gameObjectList.Add(new GameObject("spr_background"));
+
             gameObjectList.Add(thePlayer);
+
+
             for (int iMeteor = 0; iMeteor < meteorAmount; iMeteor++)
             {
                 gameObjectList.Add(new Meteorite("meteorite_one", obstacle[iMeteor], obstacle[iMeteor], metVel));
@@ -37,27 +44,34 @@ namespace Dodgem
                 gameObjectList.Add(new LaserBeam("spr_laserbeam", obstacle[iBeam], obstacle[iBeam], beamVel));
             }
 
+
         }
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+
+            System.Diagnostics.Debug.WriteLine("hearts: " + heartAmount);
             foreach (GameObject gameObject in gameObjectList)
             {
                 if (gameObject.Overlaps(thePlayer))
                 {
                     if (gameObject is Meteorite)
                     {
-                        thePlayer.Init();
+                        heartAmount -= 1;
                     }
                     if (gameObject is EnemyShip)
                     {
-                        thePlayer.Init();
+                     
                     }
                     if (gameObject is LaserBeam)
                     {
-                        thePlayer.Init();
+                     
                     }
                 }
+            }
+            for (int iHeart = 0; iHeart < heartAmount; iHeart++)
+            {
+                gameObjectList.Add(new Playerlife("spaceheart", heartX[iHeart], 0));
             }
         }
     }

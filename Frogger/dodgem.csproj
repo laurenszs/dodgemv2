@@ -45,6 +45,7 @@
     <Compile Include="GameManagement\GameEnvironment.cs" />
     <Compile Include="GameManagement\GameObject.cs" />
     <Compile Include="GameManagement\GameState.cs" />
+    <Compile Include="GameObjects\PlayerLife.cs" />
     <Compile Include="GameObjects\EnemyShip.cs" />
     <Compile Include="GameObjects\LaserBeam.cs" />
     <Compile Include="GameObjects\Meteorite.cs" />
@@ -64,11 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\meteorite_one.png" />
+    <Content Include="Content\spaceheart.png" />
     <Content Include="Content\spr_background.png" />
-    <Content Include="Content\spr_frog.png" />
     <Content Include="Content\spr_gameover_screen.png" />
     <Content Include="Content\spr_laserbeam.png" />
-    <Content Include="Content\spr_racecar.png" />
     <Content Include="Content\spr_ship.png" />
     <Content Include="Content\spr_start_screen.png" />
     <Content Include="Content\spr_win_screen.png" />
@@ -77,6 +77,7 @@
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Include="Content\ScoreFont.spritefont" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

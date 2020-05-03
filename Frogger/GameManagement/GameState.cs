@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ class GameState
 {
     protected List<GameObject> gameObjectList;
     public int gameRoom = 0;
+    
     public GameState()
     {
         gameObjectList = new List<GameObject>();
@@ -32,7 +34,10 @@ class GameState
 
     public virtual void Draw(SpriteBatch spriteBatch)
     {
+       
         foreach (GameObject gameObject in gameObjectList)
+        {
             gameObject.Draw(spriteBatch);
+        }
     }
 }

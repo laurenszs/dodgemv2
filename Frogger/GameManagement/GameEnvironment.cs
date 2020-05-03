@@ -12,6 +12,7 @@ class GameEnvironment : Game
 {
     protected GraphicsDeviceManager graphics;
     protected SpriteBatch spriteBatch;
+
     static protected ContentManager content;
     protected static Point screen;
     protected static Random random;
@@ -51,6 +52,7 @@ class GameEnvironment : Game
         content = Content;
         gameStateList = new List<GameState>();
         random = new Random();
+
     }
 
     public void ApplyResolutionSettings()
@@ -64,6 +66,7 @@ class GameEnvironment : Game
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
+
     }
 
     protected override void Draw(GameTime gameTime)

@@ -26,8 +26,9 @@ namespace Dodgem
             gameStateList.Add(new PlayingState());
             GameEnvironment.SwitchTo(0);
 
-           
-            
+
+
+
 
         }
 
