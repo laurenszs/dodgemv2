@@ -7,21 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dodgem.GameStates;
+using Dodgem;
 
-
-namespace Dodgem.GameStates
+namespace Frogger.GameStates
 {
-    class StartingState : GameState
+    class DeathState : GameState
     {
-        public StartingState()
+        PlayingState playingstate = new PlayingState();
+        public DeathState()
         {
-            gameObjectList.Add(new GameObject("spr_start_screen"));
+            gameObjectList.Add(new GameObject("gameOver"));
+           
         }
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-        
-           
+            playingstate.Init();
+
             if (GameEnvironment.keyboardState.IsKeyDown(Keys.Space))
                 GameEnvironment.SwitchTo(1);
         }

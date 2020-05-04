@@ -1,4 +1,5 @@
 ﻿using Dodgem.GameStates;
+using Frogger.GameStates;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -24,6 +25,7 @@ namespace Dodgem
 
             gameStateList.Add(new StartingState());
             gameStateList.Add(new PlayingState());
+            gameStateList.Add(new DeathState());
             GameEnvironment.SwitchTo(0);
 
 

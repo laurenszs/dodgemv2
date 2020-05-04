@@ -26,7 +26,7 @@ namespace Dodgem.GameObjects
             }
             if (position.Y - texture.Height > GameEnvironment.Screen.Y)
             {
-                position.X = random.Next(0, GameEnvironment.Screen.X - texture.Width);
+                this.position.X = random.Next(0, GameEnvironment.Screen.X - texture.Width);
                 position.Y = 1;
             }
         }

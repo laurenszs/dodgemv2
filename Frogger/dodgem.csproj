@@ -42,14 +42,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="dodgem.cs" />
+    <Compile Include="GameManagement\AssetManager.cs" />
     <Compile Include="GameManagement\GameEnvironment.cs" />
     <Compile Include="GameManagement\GameObject.cs" />
     <Compile Include="GameManagement\GameState.cs" />
+    <Compile Include="GameObjects\ITextGameObject.cs" />
     <Compile Include="GameObjects\PlayerLife.cs" />
     <Compile Include="GameObjects\EnemyShip.cs" />
     <Compile Include="GameObjects\LaserBeam.cs" />
     <Compile Include="GameObjects\Meteorite.cs" />
     <Compile Include="GameObjects\PlayerShip.cs" />
+    <Compile Include="GameObjects\TextGameObject.cs" />
+    <Compile Include="GameStates\DeathState.cs" />
     <Compile Include="GameStates\PlayingState.cs" />
     <Compile Include="GameStates\StartingState.cs" />
     <Compile Include="GameStates\winState.cs" />
@@ -61,9 +65,12 @@
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\gameOver.png" />
     <Content Include="Content\meteorite_one.png" />
     <Content Include="Content\spaceheart.png" />
     <Content Include="Content\spr_background.png" />
@@ -77,6 +84,7 @@
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Include="Content\GameFont.spritefont" />
     <None Include="Content\ScoreFont.spritefont" />
   </ItemGroup>
   <ItemGroup />

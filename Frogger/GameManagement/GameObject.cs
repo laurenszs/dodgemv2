@@ -7,17 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class GameObject
+public class GameObject
 {
     public Vector2 position;
     public Vector2 velocity;
     public Texture2D texture;
     public Random random = new Random();
+    protected bool visible;
+    protected GameObject parent;
 
     public GameObject(String assetName)
     {
 
         texture = GameEnvironment.ContentManager.Load<Texture2D>(assetName);
+        visible = true;
         Init();
     }
 
@@ -31,7 +34,26 @@ class GameObject
         
 
     }
+    public virtual Vector2 Position
+    {
+        get { return position; }
+        set { position = value; }
+    }
 
+    public virtual Vector2 GlobalPosition
+    {
+        get
+        {
+            if (parent != null)
+            {
+                return parent.GlobalPosition + Position;
+            }
+            else
+            {
+                return Position;
+            }
+        }
+    }
     public virtual void Init()
     {
 
