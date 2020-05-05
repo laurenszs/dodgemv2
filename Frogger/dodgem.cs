@@ -6,8 +6,11 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Dodgem
 {
+    //Laurens Cnossen 500821318
+    //GPA
     /// <summary>
-    /// This is the main type for your game.
+    //gebasseerd op een spel dat "Dodgem" het wat ik op de middelbare school op mijn rekenmachine had
+    //het doel is om alle obstakels te ontwijken en te zien hoe lang je kan overleven.
     /// </summary>
     class dodgem : GameEnvironment
     {
@@ -34,6 +37,6 @@ namespace Dodgem
 
         }
 
-      
+
     }
 }

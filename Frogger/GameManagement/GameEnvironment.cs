@@ -13,7 +13,6 @@ class GameEnvironment : Game
     protected GraphicsDeviceManager graphics;
     protected SpriteBatch spriteBatch;
 
-    protected static AssetManager assetManager;
     static protected ContentManager content;
     protected static Point screen;
     protected static Random random;
@@ -53,7 +52,6 @@ class GameEnvironment : Game
         content = Content;
         gameStateList = new List<GameState>();
         random = new Random();
-        assetManager = new AssetManager(Content);
 
     }
 
@@ -70,10 +68,7 @@ class GameEnvironment : Game
         spriteBatch = new SpriteBatch(GraphicsDevice);
 
     }
-    public static AssetManager AssetManager
-    {
-        get { return assetManager; }
-    }
+
 
     protected override void Draw(GameTime gameTime)
     {

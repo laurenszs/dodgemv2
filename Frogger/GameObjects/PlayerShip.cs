@@ -25,27 +25,6 @@ namespace Dodgem
         public override void Update()
         {
             ////INPUT EN BORDERCOLLISION
-            //UP KEYS 
-
-            if (GameEnvironment.keyboardState.IsKeyDown(Keys.Up))
-            {
-                if (position.Y <= 0)
-                {
-                    GameEnvironment.SwitchTo(3);
-                }
-                position.Y -= velocity.Y;
-                velocity.Y = 0;
-            }
-            //DOWN KEYS
-            if (GameEnvironment.keyboardState.IsKeyDown(Keys.Down))
-            {
-                if (position.Y > GameEnvironment.Screen.Y-texture.Height)
-                {
-                    position.Y = GameEnvironment.Screen.Y - texture.Height;
-                }
-                position.Y += velocity.Y;
-                velocity.Y = 0;
-            }
             //RIGHT KEYS
             if (GameEnvironment.keyboardState.IsKeyDown(Keys.Right))
             {

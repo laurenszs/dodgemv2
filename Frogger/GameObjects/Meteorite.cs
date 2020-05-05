@@ -19,11 +19,8 @@ namespace Dodgem.GameObjects
         }
         public override void Update()
         {
+            
             position.Y += velocity.Y;
-            if (position.Y + texture.Height < 0)
-            {
-                position.Y = GameEnvironment.Screen.Y;
-            }
             if (position.Y - texture.Height > GameEnvironment.Screen.Y)
             {
                 position.X = random.Next(0, GameEnvironment.Screen.X - texture.Width);

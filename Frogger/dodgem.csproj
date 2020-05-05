@@ -42,17 +42,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="dodgem.cs" />
-    <Compile Include="GameManagement\AssetManager.cs" />
     <Compile Include="GameManagement\GameEnvironment.cs" />
     <Compile Include="GameManagement\GameObject.cs" />
     <Compile Include="GameManagement\GameState.cs" />
-    <Compile Include="GameObjects\ITextGameObject.cs" />
     <Compile Include="GameObjects\PlayerLife.cs" />
     <Compile Include="GameObjects\EnemyShip.cs" />
     <Compile Include="GameObjects\LaserBeam.cs" />
     <Compile Include="GameObjects\Meteorite.cs" />
     <Compile Include="GameObjects\PlayerShip.cs" />
-    <Compile Include="GameObjects\TextGameObject.cs" />
     <Compile Include="GameStates\DeathState.cs" />
     <Compile Include="GameStates\PlayingState.cs" />
     <Compile Include="GameStates\StartingState.cs" />

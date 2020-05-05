@@ -1,6 +1,5 @@
 ﻿using Dodgem.GameObjects;
 using Dodgem;
-using Frogger.GameObjects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -76,24 +75,31 @@ namespace Dodgem
 
                 if (heartAmount == dead)
                 {
-
-                    dmgStop = NO_DMG;
+                                        dmgStop = NO_DMG;
                     GameEnvironment.SwitchTo(2);
                     heartAmount = 2;
                 }
 
                 if (gameObject.Overlaps(thePlayer) == true)
                 {
-                    if (gameObject is Meteorite || gameObject is EnemyShip || gameObject is LaserBeam)
+                    if (gameObject is Meteorite)
                     {
+                        heartAmount -= dmgStop;
+                        dmgStop = NO_DMG;
+                    }
+                    if (gameObject is EnemyShip) {
+                        heartAmount -= dmgStop;
+                        dmgStop = NO_DMG;
+                        
+                    }
+                    if (gameObject is LaserBeam) {
                         heartAmount -= dmgStop;
                         dmgStop = NO_DMG;
                     }
                 }
             }
-
-
-            for (int iHeart = 0; iHeart < heartAmount; iHeart++)
+            
+            for (int iHeart = 0; iHeart < heartX.Length; iHeart++)
             {
                 gameObjectList.Add(new Playerlife("spaceheart", heartX[iHeart], 0));
             }
